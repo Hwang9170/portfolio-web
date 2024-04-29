@@ -34,7 +34,7 @@
 <body>
   
   <nav id="navigation" class="navbar navbar-expand-lg">
-    <a class="navbar-brand" href="#">HWANG</a>
+    <a class="navbar-brand" href="#">HWANG's Portfolio</a>
 
     <button
       class="navbar-toggler"
@@ -51,16 +51,8 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item active">
+          <br>
          <a href="index.html">홈으로 가기</a>
-        </li>
-        <li class="nav-item">
-          <a href="index.html">홈으로 가기</a>
-        </li>
-        <li class="nav-item">
-          <a href="index.html">홈으로 가기</a>
-        </li>
-        <li class="nav-item">
-          <a href="index.html">홈으로 가기</a>
         </li>
       </ul>
     </div>
@@ -79,19 +71,22 @@
 <div id="about" class="section">
   <div class="container">
       <div class="row">
+
        <!-- 프로젝트 카드 1 -->
 <div class="col-md-6">
   <div class="project-card">
       <div class="overlay"></div>
       <div class="card-content rounded">
-        <img class="aboutImage" src="img/lemnis1.png" alt="" />
+        <img class="aboutImage" src="img/hwang.png" alt="" />
           <div class="project-text">
-              <h4 class="aboutMe">Project 1</h4>
-              <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
+            <br>
+              <h4 class="aboutMe">자기 소개 어플리케이션</h4>
+              <p> 제 소개를 담은 어플리케이션을 개발하였습니다.<br> 
+                웹으로 개발후 웹앱 형태로 출시하였습니다.<br>
+                현재 플레이스토어에서 다운로드 가능합니다.
+                              </p>
               <div class="col-md-12 text-center">
-                <a href="/projects/p3.html" class="contactButton">자세히 보기</a>
+                <a href="https://play.google.com/store/apps/details?id=appinventor.ai_jkimg7133.HWANG" class="contactButton">보러가기</a>
               </div>
           </div>
       </div>
@@ -112,6 +107,7 @@
                   <div class="card-content">
                     <img class="aboutImage" src="img/lemnis1.png" alt="" />
                     <div class="project-text">
+                                  <br>
                           <h4 class="aboutMe">Project 2</h4>
                           <p>
                               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -153,6 +149,7 @@
 <br> <br><br> <br> <br><br> 
 <br> <br><br> <br> <br><br> 
 
+
 <div class="col-md-6">
   <div class="project-card">
       <div class="overlay"></div>
@@ -183,37 +180,7 @@
   document.querySelectorAll('.project-card').forEach(function(card) {
       var container = card.querySelector('.card-content');
       var overlay = card.querySelector('.overlay');
-      var sensitivity = 0.05; // 감도 설정
-
-      card.addEventListener('mousemove', function(e) {
-          var rect = container.getBoundingClientRect();
-          var offsetX = e.clientX - rect.left - rect.width / 2;
-          var offsetY = e.clientY - rect.top - rect.height / 2;
-
-          var rotateY = offsetX * sensitivity;
-          var rotateX = offsetY * sensitivity;
-
-          overlay.style.backgroundPosition = `${offsetX / 5}px ${offsetY / 5}px`;
-          container.style.transition = 'transform 0.1s ease-out'; // 부드러운 애니메이션 적용
-          container.style.transform = `perspective(350px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-      });
-
-      card.addEventListener('mouseleave', function() {
-          overlay.style.opacity = '0';
-          container.style.transition = 'transform 0.5s ease'; // 부드러운 애니메이션 적용
-          container.style.transform = 'perspective(350px) rotateY(0deg) rotateX(0deg)';
-      });
-
-      card.addEventListener('click', function(event) {
-          event.stopPropagation();
-      });
-  });
-</script>
-<script>
-  document.querySelectorAll('.project-card').forEach(function(card) {
-      var container = card.querySelector('.card-content');
-      var overlay = card.querySelector('.overlay');
-      var sensitivity = 0.1; // 감도 설정
+      var sensitivity = 0.02; // 감도 설정
 
       function handleMove(e) {
           e.preventDefault(); // 모바일 기본 스크롤 방지
@@ -223,10 +190,10 @@
           var offsetY = e.clientY - rect.top - rect.height / 2;
 
           var rotateY = offsetX * sensitivity;
-          var rotateX = offsetY * sensitivity;
+          var rotateX = -offsetY * sensitivity;
 
           overlay.style.backgroundPosition = `${offsetX / 5}px ${offsetY / 5}px`;
-          container.style.transition = 'transform 0.1s ease-out'; // 부드러운 애니메이션 적용
+          container.style.transition = 'none'; // 부드러운 애니메이션 제거
           container.style.transform = `perspective(350px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
       }
 
@@ -237,7 +204,7 @@
       }
 
       card.addEventListener('mouseenter', function(e) {
-          // 모바일에서는 mouseenter 이벤트가 없으므로 이벤트를 직접 호출
+          // 모바일에서도 mouseenter 이벤트와 동일한 동작을 유발하기 위해 touchstart를 사용
           handleMove(e);
       });
 
@@ -245,12 +212,12 @@
       card.addEventListener('mouseleave', handleLeave);
 
       card.addEventListener('touchstart', function(e) {
-          // 모바일에서는 touchmove 이벤트를 통해 드래그 중에도 이벤트가 발생하도록 설정
+          // 모바일에서도 mousemove 이벤트와 동일한 동작을 유발하기 위해 touchmove를 사용
           card.addEventListener('touchmove', handleMove);
       });
 
       card.addEventListener('touchend', function() {
-          // 모바일에서는 touchend 이벤트에 대한 처리 추가
+          // 모바일에서 touchend 이벤트에 대한 처리 추가
           card.removeEventListener('touchmove', handleMove);
           handleLeave();
       });
