@@ -387,3 +387,30 @@ body {
   position: fixed;
   top: 0;
 }
+
+
+.project-card {
+  margin-bottom: 20px; /* 각 카드의 하단 간격 조절 */
+}
+
+
+.project-card .overlay {
+  pointer-events: none; /* overlay 요소에 대한 이벤트 캡처 방지 */
+}
+
+
+/* 마우스 호버 시 회전 효과 */
+.project-card:hover {
+  transform: rotateY(5deg) rotateX(5deg); /* 마우스 호버 시 회전 효과를 적용합니다. */
+}
+
+.project-card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* 불투명한 배경 색상을 설정합니다. */
+  opacity: 0; /* 초기에는 투명하게 설정합니다. */
+  transition: opacity 0.3s ease; /* 투명도에 대한 전환을 추가합니다. */
+}
