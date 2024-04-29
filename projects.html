@@ -209,6 +209,58 @@
       });
   });
 </script>
+<script>
+  document.querySelectorAll('.project-card').forEach(function(card) {
+      var container = card.querySelector('.card-content');
+      var overlay = card.querySelector('.overlay');
+      var sensitivity = 0.1; // 감도 설정
+
+      function handleMove(e) {
+          e.preventDefault(); // 모바일 기본 스크롤 방지
+
+          var rect = container.getBoundingClientRect();
+          var offsetX = e.clientX - rect.left - rect.width / 2;
+          var offsetY = e.clientY - rect.top - rect.height / 2;
+
+          var rotateY = offsetX * sensitivity;
+          var rotateX = offsetY * sensitivity;
+
+          overlay.style.backgroundPosition = `${offsetX / 5}px ${offsetY / 5}px`;
+          container.style.transition = 'transform 0.1s ease-out'; // 부드러운 애니메이션 적용
+          container.style.transform = `perspective(350px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+      }
+
+      function handleLeave() {
+          overlay.style.opacity = '0';
+          container.style.transition = 'transform 0.5s ease'; // 부드러운 애니메이션 적용
+          container.style.transform = 'perspective(350px) rotateY(0deg) rotateX(0deg)';
+      }
+
+      card.addEventListener('mouseenter', function(e) {
+          // 모바일에서는 mouseenter 이벤트가 없으므로 이벤트를 직접 호출
+          handleMove(e);
+      });
+
+      card.addEventListener('mousemove', handleMove);
+      card.addEventListener('mouseleave', handleLeave);
+
+      card.addEventListener('touchstart', function(e) {
+          // 모바일에서는 touchmove 이벤트를 통해 드래그 중에도 이벤트가 발생하도록 설정
+          card.addEventListener('touchmove', handleMove);
+      });
+
+      card.addEventListener('touchend', function() {
+          // 모바일에서는 touchend 이벤트에 대한 처리 추가
+          card.removeEventListener('touchmove', handleMove);
+          handleLeave();
+      });
+
+      card.addEventListener('click', function(event) {
+          event.stopPropagation();
+      });
+  });
+</script>
+
 
 
 <div class="copyrightSection">
