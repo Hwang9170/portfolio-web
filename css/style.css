@@ -1,6 +1,6 @@
 body {
   font-size: 14px;
-  color: #333;
+  color: #f5efef;
   background-color: #fff;
   letter-spacing: 1px;
 }
@@ -57,7 +57,7 @@ body {
     270deg,
     rgba(2, 0, 36, 1) 0%,
     rgba(9, 9, 121, 1) 0%,
-    rgba(15, 124, 5, 1) 0%,
+    rgb(16, 17, 16) 0%,
     rgba(0, 90, 143, 1) 100%
   );
   color: #fff;
@@ -68,8 +68,8 @@ body {
     90deg,
     rgba(2, 0, 36, 1) 0%,
     rgba(9, 9, 121, 1) 0%,
-    rgba(15, 124, 5, 1) 0%,
-    rgba(0, 90, 143, 1) 100%
+    rgb(21, 21, 21) 0%,
+    rgb(16, 16, 16) 100%
   );
   color: #fff;
 }
@@ -94,7 +94,7 @@ body {
 }
 
 .chart .percent {
-  color: #000;
+  color: #dac6c6;
   line-height: 152px;
   display: inline-block;
   font-size: 35px;
@@ -142,7 +142,7 @@ body {
     270deg,
     rgba(2, 0, 36, 1) 0%,
     rgba(9, 9, 121, 1) 0%,
-    rgba(19, 146, 7, 1) 0%,
+    rgb(15, 16, 15) 0%,
     rgba(0, 212, 255, 1) 100%
   );
 }
@@ -161,7 +161,7 @@ body {
   height: 50px;
   font-size: 45px;
   margin-left: -20%;
-  color: #444;
+  color: #f5ebeb;
 }
 
 .contactButton {
@@ -180,7 +180,7 @@ body {
     270deg,
     rgba(2, 0, 36, 1) 0%,
     rgba(9, 9, 121, 1) 0%,
-    rgba(19, 146, 7, 1) 0%,
+    rgb(1, 7, 0) 0%,
     rgba(0, 212, 255, 1) 100%
   );
   opacity: 0.7;
@@ -204,14 +204,14 @@ body {
     270deg,
     rgba(2, 0, 36, 1) 0%,
     rgba(9, 9, 121, 1) 0%,
-    rgba(19, 146, 7, 1) 0%,
+    rgb(21, 21, 21) 0%,
     rgba(0, 212, 255, 1) 100%
   );
   border-color: linear-gradient(
     270deg,
     rgba(2, 0, 36, 1) 0%,
     rgba(9, 9, 121, 1) 0%,
-    rgba(19, 146, 7, 1) 0%,
+    rgb(1, 9, 0) 0%,
     rgba(0, 212, 255, 1) 100%
   );
   color: #fff;
@@ -274,7 +274,7 @@ body {
 .items a {
   width: 40px;
   height: 40px;
-  background-color: rgba(12, 36, 97, 0.3);
+  background-color: rgba(205, 209, 219, 0.3);
   position: relative;
   display: inline-block;
 
@@ -350,7 +350,7 @@ body {
     90deg,
     rgba(2, 0, 36, 1) 0%,
     rgba(9, 9, 121, 1) 0%,
-    rgba(15, 124, 5, 1) 0%,
+    rgb(108, 121, 160) 0%,
     rgba(0, 90, 143, 1) 100%
   );
   padding: 20px 10px;
@@ -374,7 +374,7 @@ body {
 
 .navbar-brand,
 .navbar-brand:hover {
-  color: #000;
+  color: #f8f0f0;
 }
 
 .navbar-toggler-icon {

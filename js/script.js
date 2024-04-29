@@ -6,7 +6,7 @@ $(document).ready(function () {
   });
 
   var typed = new Typed(".typed", {
-    strings: ["Jr. Full-Stack", "Video Editor", "Discord Bot Developer"],
+    strings: ["바나나 우유 사주세요.", "아 배고프다", "집가고 싶다."],
     typeSpeed: 60,
     startDelay: 900,
     showCursor: false,
