@@ -58,7 +58,7 @@ body {
     rgba(2, 0, 36, 1) 0%,
     rgba(9, 9, 121, 1) 0%,
     rgb(16, 17, 16) 0%,
-    rgba(0, 90, 143, 1) 100%
+    rgb(85, 88, 88) 100%
   );
   color: #fff;
 }
@@ -349,9 +349,9 @@ body {
   background: linear-gradient(
     90deg,
     rgba(2, 0, 36, 1) 0%,
-    rgba(9, 9, 121, 1) 0%,
-    rgb(108, 121, 160) 0%,
-    rgba(0, 90, 143, 1) 100%
+    rgb(13, 13, 14) 0%,
+    rgb(242, 243, 245) 0%,
+    rgb(31, 31, 31) 100%
   );
   padding: 20px 10px;
   z-index: 100;
@@ -363,7 +363,7 @@ body {
 }
 
 #navigation li a {
-  color: #fff;
+  color: #121212;
 }
 
 #navigation li a:hover {
@@ -374,7 +374,8 @@ body {
 
 .navbar-brand,
 .navbar-brand:hover {
-  color: #f8f0f0;
+  font-weight: bold; /* 글자를 굵게 설정 */
+  color: #0a0a0a;
 }
 
 .navbar-toggler-icon {
