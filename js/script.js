@@ -6,7 +6,7 @@ $(document).ready(function () {
   });
 
   var typed = new Typed(".typed", {
-    strings: ["바나나 우유 사주세요.", "아 배고프다", "집가고 싶다."],
+    strings: ["안녕하세요 황광호 입니다.", "최선을 다해 최고의 결과를", "열심히 노력하고 있습니다."],
     typeSpeed: 60,
     startDelay: 900,
     showCursor: false,

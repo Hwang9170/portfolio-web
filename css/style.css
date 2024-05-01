@@ -356,7 +356,6 @@ body {
   padding: 20px 10px;
   z-index: 100;
   width: 100%;
-  font-family: 'Roboto', sans-serif; /* Roboto 폰트를 사용합니다. */
 }
 
 #navigation li {
